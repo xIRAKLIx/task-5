@@ -1,9 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./public/stylesheets/header.css">
+</head>
+<body>
+
 <header class="container">
     <div class="username">
-        <p>
-            <%= email %>
-        </p>
+        <p ><%= email %></p>
     </div>
+
     <div class="nav-wrapper">
         <nav class="main-nav">
             <ul class="nav-list-wrapper">
@@ -11,6 +22,7 @@
                 <li><a class="nav-link" href="/">Projects</a></li>
                 <li><a class="nav-link" href="/">About</a></li>
                 <li><a class="nav-link" href="/">Newsletter</a></li>
+                <li><a class="nav-link" href="/blogs/new">New Post</a></li>
             </ul>
         </nav>
 
@@ -26,8 +38,10 @@
         <a class="nav-link" href="/">Projects</a>
         <a class="nav-link" href="/">About</a>
         <a class="nav-link" href="/">Newsletter</a>
+        <a class=" nav-link" href="/blogs/new">New Post</a>
+
         <figure class="close-btn-wrapper" id="close-btn-wrapper">
-            <img src="/images/close-icon.svg" alt="">
+            <img src="/images/close-icon.svg" alt="Close menu">
         </figure>
     </div>
 </header>
@@ -37,11 +51,16 @@
     const closeBtn = document.getElementById('close-btn-wrapper');
     const mobileMenu = document.getElementById('mobileMenu');
 
-    burger.addEventListener('click', () => {
+    burger?.addEventListener('click', () => {
         mobileMenu.classList.toggle('show');
     });
 
-    closeBtn.addEventListener('click', () => {
+    closeBtn?.addEventListener('click', () => {
         mobileMenu.classList.toggle('show');
     });
 </script>
+
+</body>
+</html>
+
+

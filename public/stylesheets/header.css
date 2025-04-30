@@ -1,8 +1,15 @@
+body {
+    padding-left: 112px;
+    padding-right: 112px;
+}
+
+
 header {
     display: flex;
     justify-content: flex-end;
     margin: auto;
-    padding-top: 50px;
+    padding-top: 30px;
+
 }
 
 .nav-wrapper {
@@ -13,7 +20,7 @@ header {
     position: relative;
 }
 
-.nav-list-wrapper{
+.nav-list-wrapper {
     display: flex;
     gap: 30px;
     list-style: none;
@@ -22,6 +29,7 @@ header {
 }
 
 .nav-link {
+    position: relative;
     color: #1A1A1A;
     font-family: Inter, sans-serif;
     font-size: 20px;
@@ -29,7 +37,25 @@ header {
     font-weight: 400;
     line-height: 24px;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
+
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: #1A1A1A;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
 
 .burger {
     display: none;
@@ -44,6 +70,7 @@ header {
     background: #1A1A1A;
     border-radius: 2px;
 }
+
 
 .mobile-menu {
     display: flex;
@@ -67,12 +94,31 @@ header {
 }
 
 .mobile-menu a {
+    position: relative;
     color: #FFF;
     font-family: Inter, sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: 24px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+
+.mobile-menu .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: #FFF;
+    transition: width 0.3s ease;
+}
+
+.mobile-menu .nav-link:hover::after {
+    width: 100%;
 }
 
 .close-btn-wrapper {

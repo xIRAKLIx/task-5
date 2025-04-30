@@ -8,7 +8,7 @@
     margin-bottom: 15px;
 }
 
-.container {
+.container2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,31 +29,165 @@
 
 .blog-form input,
 .blog-form textarea {
-    width: 600px;
+    width: 800px;
     padding: 10px;
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    height: 50px;
 }
-
 .blog-form textarea {
     height: 150px;
-    resize: vertical;
+    resize: none;
+}
+input::placeholder,
+textarea::placeholder {
+    color: black;
 }
 
 .btn {
-    display: inline-block;
-    padding: 10px 15px;
-    background: #28a745;
+    width: 823px;
+    height: 60px;
+    top: 542.16px;
+    left: 242.5px;
+    background-color: #1A1A1A;
     color: white;
-    text-decoration: none;
-    border-radius: 4px;
     margin-top: 15px;
-    border: none;
-    cursor: pointer;
-    font-size: 1em;
+
+
 }
 
 .btn:hover {
-    background: #218838;
+    background-color: #2a2a2a;
+    cursor: pointer;
+}
+
+
+.line {
+    max-width: 100%;
+    height: 295px;
+    margin: 40px auto;
+    border-bottom: 1px solid #00000057;
+    border-top: 1px solid #00000057;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.line h1 {
+    font-size: 243.8px;
+
+}
+
+
+
+
+/*Responsive Timeeeee*/
+
+@media (max-width: 1440px) {
+    body {
+        padding-right: 100px;
+        padding-left: 100px;
+    }
+    .line {
+        height: 200px;
+        margin-top: 30px;
+
+    }
+
+    .line h1 {
+        font-size: 160.8px;
+    }
+
+
+    .blog-form input,
+    .blog-form textarea {
+        width: 600px;
+    }
+    .btn {
+        width: 623px;
+    }
+}
+
+
+
+@media (max-width: 1024px) {
+    body {
+        padding-right: 80px;
+        padding-left: 80px;
+    }
+    .line {
+        height: 120px;
+        margin-top: 30px;
+
+    }
+
+    .line h1 {
+        font-size: 90.8px;
+    }
+
+
+
+    .blog-form input,
+    .blog-form textarea {
+        width: 400px;
+    }
+    .btn {
+        width: 423px;
+        height: 45px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    body {
+        padding-right: 60px;
+        padding-left: 60px;
+    }
+    .line {
+        height: 90px;
+        margin-top: 30px;
+
+    }
+
+    .line h1 {
+        font-size: 60px;
+    }
+
+    .blog-form input,
+    .blog-form textarea {
+        width: 300px;
+    }
+    .btn {
+        width: 323px;
+        height: 45px;
+    }
+
+}
+
+@media (max-width: 576px) {
+    body {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+    .line {
+        height: 80px;
+        margin-top: 30px;
+
+    }
+
+    .line h1 {
+        font-size: 60px;
+    }
+
+    .blog-form input,
+    .blog-form textarea {
+        width: 250px;
+    }
+    .btn {
+        width: 273px;
+        height: 45px;
+    }
+
 }

@@ -4,23 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>The Blog | New Blog</title>
+    <link rel="stylesheet" href="/stylesheets/header.css">
     <link rel="stylesheet" href="/stylesheets/new_blog.css">
 </head>
 <body>
 
-<div class="container">
-    <h2>New Blog</h2>
+<%- include('partials/header', {email: email}); %>
+
+
+<div class="line">
+
+    <h1>New Post</h1>
+</div>
+
+<div class="container2">
+
+
 
     <% if (error) { %>
         <p class="error-message"><%= error %></p>
     <% } %>
 
     <form class="blog-form" action="/blogs/new" method="post">
-        <label for="title">Title:</label>
+
         <input type="text" name="title" placeholder="Title">
-        <label for="content">Content:</label>
         <textarea name="content" placeholder="Content"></textarea>
-        <button class="btn" type="submit">Submit</button>
+        <button class="btn" type="submit">Send Message</button>
     </form>
 </div>
 </body>

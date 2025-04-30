@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/stylesheets/header.css">
     <link rel="stylesheet" href="/stylesheets/blogs.css">
 </head>
@@ -13,11 +14,18 @@
 
 <%- include('partials/header', {email: email}); %>
 
+
+<div class="line">
+
+    <h1>THE BLOG</h1>
+</div>
+
+
 <div class="container">
-    <h2>All Blogs</h2>
-    <a class="btn" href=/logout>Log Out</a>
+
+
     <br>
-    <a class="btn" href="/blogs/new">Create New Blog</a>
+
 
     <ul class="blog-list">
         <% blogs.forEach(blog => { %>
@@ -35,6 +43,8 @@
         <% }) %>
     </ul>
 </div>
+
+<a class="btn" href=/logout>Log Out</a>
 
 </body>
 </html>
